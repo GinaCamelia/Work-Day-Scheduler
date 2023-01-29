@@ -13,10 +13,29 @@ $(document).ready(function(){
 			} else if(currentTime < timeBlock){
 				textArea.addClass('future').css('background-color', '#f06868'); // yellow
 			} else {
-				textArea.addClass('past').css('background-color', '#606470'); //grey
+				textArea.addClass('past').css('background-color', '#d3d6db'); //grey
 			}
 		});
 	}
+
+	let saveBtn = $('.save-btn');
+	saveBtn.on('click', function(){
+		let textArea = $(this).closest('.calendar-row').find('.calendar-textarea');
+		let input = textArea.val();
+		let timeOfInput = $(this).closest('.calendar-row').find('.time-element').attr('id');
+		localStorage.setItem(input, timeOfInput);
+	});
+
+
+
+
+
+
+
+
+
+
+
 
 	checkTime();
 
