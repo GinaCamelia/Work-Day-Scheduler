@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+body{
+    background: linear-gradient(110.5deg, rgba(248, 196, 249, 0.66) 22.8%, rgba(253, 122, 4, 0.15) 64.6%);
+    font-family: 'Indie Flower', cursive;
+    font-size: 24px;
+}
+
+.calendar table {
+    width: 100%; /* sets the table width to 100% of the available space */
+    border-collapse: collapse; /* removes the space between table cells */
+  }
+  
+  .calendar .calendar-textarea{
+    width: 88%;
+  }
+  
+  .schedule-input {
+    display: flex;
+  }
+  
+  .calendar .time {
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2.5px;
+  }
+  
+  .calendar .task {
+    font-weight: bold;
+    letter-spacing: 2.5px;
+  }
+
+  .calendar .time-element {
+    text-align: center;
+    letter-spacing: 2.5px;
+  }
+  
+  @media only screen and (max-width: 600px) { /* styles to apply when screen width is 600px or less */
+    .calendar table,
+    .calendar thead,
+    .calendar tbody,
+    .calendar th,
+    .calendar td,
+    .calendar tr {
+      display: block; 
+    }
+  
+    .calendar thead tr {
+      position: absolute; /* positions the table header off-screen */
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .calendar tr {
+      border: 1px solid #ccc; /* adds a border to each row */
+    }
+  
+    .calendar td {
+      border: none; /* removes the border from each cell */
+      border-bottom: 1px solid #ccc; /* adds a border to the bottom of each cell */
+      position: relative; /* positions the cell content */
+      padding-left: 50%; /* adds padding to the left of the cell content */
+    }
+  
+    .calendar td:before {
+      position: absolute; 
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap; 
+    }
+  
+    .calendar td:nth-of-type(1):before { 
+      content: "Time";
+      text-align: left;
+    }
+  
+    .calendar td:nth-of-type(2):before { 
+      content: "Task";
+      color: black;
+    }
+
+    .calendar .time-element {
+        color: black;
+        text-align: left;
+    }
+  }
+  
