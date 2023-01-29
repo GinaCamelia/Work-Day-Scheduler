@@ -23,7 +23,7 @@ $(document).ready(function(){
 		let textArea = $(this).closest('.calendar-row').find('.calendar-textarea');
 		let input = textArea.val();
 		let timeOfInput = $(this).closest('.calendar-row').find('.time-element').attr('id');
-		localStorage.setItem(input, timeOfInput);
+		localStorage.setItem(timeOfInput, input);
 	});
 
 	let removeBtn = $('.remove-btn');
@@ -34,29 +34,13 @@ $(document).ready(function(){
 		localStorage.removeItem(timeOfEvent);
 	});
 
-
-
-
-
-
-
-
-
-
-
+	// Retrieve all saved events from local storage on page reload
+	for(i = 0; i < localStorage.length; i++){
+		let time = localStorage.key(i);
+		let event = localStorage.getItem(time);
+		// Find the text area associated with the time and set its value to the saved event
+		$(`[id='${time}']`).closest('.calendar-row').find('.calendar-textarea').val(event);
+	}
 
 	checkTime();
-
-
-
-
-
-
-
-
-
-
-
-
-
-})
+});
