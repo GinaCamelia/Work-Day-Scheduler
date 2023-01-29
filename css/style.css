@@ -5,6 +5,15 @@ body{
     font-size: 24px;
 }
 
+.moment-time {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+td.schedule-input {
+  margin-bottom: 5px;
+}
+
 .calendar table {
     width: 100%; /* sets the table width to 100% of the available space */
     border-collapse: collapse; /* removes the space between table cells */
