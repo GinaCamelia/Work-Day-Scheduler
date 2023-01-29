@@ -26,6 +26,14 @@ $(document).ready(function(){
 		localStorage.setItem(input, timeOfInput);
 	});
 
+	let removeBtn = $('.remove-btn');
+	removeBtn.on('click', function(){
+		let textArea = $(this).closest('.calendar-row').find('.calendar-textarea');
+		textArea.val('');
+		let timeOfEvent = $(this).closest('.calendar-row').find('.time-element').attr('id');
+		localStorage.removeItem(timeOfEvent);
+	});
+
 
 
 
