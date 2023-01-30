@@ -34,3 +34,14 @@ The script also has a save and remove button that allows you to save and remove 
 
 On page reload, the code retrieves all the saved events from local storage and displays them in the text area associated with the corresponding time. Finally, the checkTime function is called to initialize the colors of each time block.
 
+## Usage
+
+![A user clicks on slots on the color-coded calendar and edits the events.](./resources/Work%20Day%20Scheduler.gif)
+
+Deployed application: 
+
+ ## Credits
+  N/A
+
+  ## License
+  Check the LICENSE file for details in the repository
