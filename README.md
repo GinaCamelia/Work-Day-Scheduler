@@ -38,7 +38,7 @@ On page reload, the code retrieves all the saved events from local storage and d
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./resources/Work%20Day%20Scheduler.gif)
 
-Deployed application: 
+Deployed application: https://ginacamelia.github.io/Work-Day-Scheduler/ 
 
  ## Credits
   N/A
